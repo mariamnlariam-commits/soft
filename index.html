@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>soft- Skin Care</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header>
+    <h1>SOFT</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="img1.jpg" style="width:100%">
+    <div class="text">Caption Text</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="img2.jpg" style="width:100%">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="img3.jpg" style="width:100%">
+    <div class="text">Caption Three</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+  <section id="home" class="hero">
+    <h2>Your Skin Deserves the Best</h2>
+    <p>Natural & Healthy Skin Care Products</p>
+    <button id="shopBtn">Shop Now</button>
+  </section>
+
+  <section id="products" class="products">
+    <h2>Our Best Sellers</h2>
+
+    <div class="product-list">
+      <div class="card">
+        <img src="https://via.placeholder.com/200" alt="Product 1">
+        <h3>Moisturizing Cream</h3>
+        <p>Hydrates and softens your skin.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/200" alt="Product 2">
+        <h3>Vitamin C Serum</h3>
+        <p>Brightens your skin tone naturally.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/200" alt="Product 3">
+        <h3>Cleanser</h3>
+        <p>Deep cleaning without irritation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+   
+   <form id="regForm" action="">
+
+<h1>Contact Us:</h1>
+
+<!-- One "tab" for each step in the form: -->
+<div class="tab">Name:
+  <p><input placeholder="First name..." oninput="this.className = ''"></p>
+  <p><input placeholder="Last name..." oninput="this.className = ''"></p>
+</div>
+
+<div class="tab">Contact Info:
+  <p><input placeholder="E-mail..." oninput="this.className = ''"></p>
+  <p><input placeholder="Phone..." oninput="this.className = ''"></p>
+</div>
+
+<div class="tab">Birthday:
+  <p><input placeholder="dd" oninput="this.className = ''"></p>
+  <p><input placeholder="mm" oninput="this.className = ''"></p>
+  <p><input placeholder="yyyy" oninput="this.className = ''"></p>
+</div>
+
+<div class="tab">Login Info:
+  <p><input placeholder="Username..." oninput="this.className = ''"></p>
+  <p><input placeholder="Password..." oninput="this.className = ''"></p>
+</div>
+
+<div style="overflow:auto;">
+  <div style="float:right;">
+    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+  </div>
+</div>
+
+<!-- Circles which indicates the steps of the form: -->
+<div style="text-align:center;margin-top:40px;">
+  <span class="step"></span>
+  <span class="step"></span>
+  <span class="step"></span>
+  <span class="step"></span>
+</div>
+
+</form>
+
+  </section>
+
+  <footer>
+    <p>© 2025 Skin Glow — All Rights Reserved</p>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
