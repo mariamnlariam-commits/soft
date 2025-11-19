@@ -201,7 +201,7 @@ footer {
   top: 10px;
   left: 30%;
   height: 20px;
-  width; 20px;
+  width: 20px;
 }
 
 .fa {
@@ -238,3 +238,11 @@ footer {
   text-decoration: none;
   border-radius: 50%;
 }
+
+#banner {
+      max-width: 100%;
+    height: auto;
+  margin: 0px;
+  padding: 0px;
+
+  
