@@ -269,3 +269,9 @@ footer {
   background: #fff;
   margin-top: 40px;
 }
+
+#banner {
+    max-width: 100%;
+    height: auto;
+}
+
