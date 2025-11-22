@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>soft- Skin Care</title>
-
-  <link rel="stylesheet" href="style.css">
+  <title>SOFT - Skin Care</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -18,141 +18,126 @@
     <a href="#contact">Contact</a>
   </nav>
 </header>
-  
-
 
 <section id="home" class="section">
   <img src="banner.png" id="banner" alt="banner" width="1800" height="1600">
 </section>
 
-<section id="home" class="hero">
+<section id="hero" class="hero">
   <h2>Your Skin Deserves the Best</h2>
   <p>Soft is a Bahraini skin care brand that was established in 2020. By using our products we guarantee 
-<br> you the best healthy glowing skin. We're proud to say that our products are organic based, <br> so you could use them with no worries.</p>
+  <br> you the best healthy glowing skin. We're proud to say that our products are organic based, <br> so you could use them with no worries.</p>
   <button id="shopBtn">Shop Now</button>
 </section>
 
-
 <section id="products" class="products">
-  <h2>Our product</h2>
-
+  <h2>Our Products</h2>
   <div class="product-list">
 
     <div class="card">
-      <img src="orange scrub.png" alt="scrub1">
-      <h3>SCRUB</h3>
-      <p>Hydrates and softens your skin.</p>
+      <img src="orange-scrub.png" alt="Scrub 1">
+      <h3>Orange Scrub</h3>
+      <p>Gently scrubs your skin and makes it soft and smooth.</p>
     </div>
 
     <div class="card">
-      <img src="coffee scrub.png" alt="scrub2">
-      <h3>SCRUB</h3>
-      <p>Brightens your skin tone naturally.</p>
+      <img src="coffee-scrub.png" alt="Scrub 2">
+      <h3>Coffee Scrub</h3>
+      <p>Helps brighten your skin and wakes it up a bit.</p>
     </div>
 
     <div class="card">
-      <img src="cherry scrub.png" alt="scrub3">
-      <h3>SCRUB</h3>
-      <p>Deep cleaning without irritation.</p>
+      <img src="cherry-scrub.png" alt="Scrub 3">
+      <h3>Cherry Scrub</h3>
+      <p>Deep cleans your skin without making it feel rough.</p>
     </div>
 
     <div class="card">
       <img src="moroccan-scrub.png" alt="Scrub 4">
       <h3>Moroccan Scrub</h3>
-      <p>Deep cleaning without irritation.</p>
+      <p>Leaves your skin fresh and glowing naturally.</p>
     </div>
 
     <div class="card">
       <img src="nila-scrub.png" alt="Scrub 5">
       <h3>Nila Scrub</h3>
-      <p>Deep cleaning without irritation.</p>
+      <p>Removes dead skin and keeps it soft.</p>
     </div>
 
     <div class="card">
       <img src="myrrh-toner.png" alt="Toner 6">
       <h3>Myrrh Toner</h3>
-      <p>Soothes and refreshes your skin.</p>
+      <p>Soothes your skin and keeps it feeling nice.</p>
     </div>
 
     <div class="card">
-      <img src="lavender scrub.png" alt="Scrub 7">
+      <img src="lavender-scrub.png" alt="Scrub 7">
       <h3>Lavender Scrub</h3>
-      <p>Deep cleaning without irritation.</p>
+      <p>Gently scrubs and smells really nice.</p>
     </div>
     
-<div class="card">
+    <div class="card">
       <img src="lavender-cleanser.png" alt="Cleanser 8">
       <h3>Lavender Cleanser</h3>
-      <p>Deep cleaning without irritation.</p>
+      <p>Cleans your face without being harsh.</p>
     </div>
 
-<div class="card">
-      <img src="soft moisturizers.png" alt="Moisturizers 9">
+    <div class="card">
+      <img src="soft-moisturizers.png" alt="Moisturizers 9">
       <h3>Soft Moisturizers</h3>
-      <p>Deep cleaning without irritation.</p>
+      <p>Keeps your skin soft and hydrated all day.</p>
     </div>
 
   </div>
 </section>
 
-
 <section id="contact" class="contact">
+  <form id="regForm" action="https://formspree.io/f/xyzlwred" method="POST">
 
-  <form id="regForm" 
-  action="https://formspree.io/f/xyzlwred"
-  method="POST"
->
+    <h1>Contact Us</h1>
 
-
-  <h1>Contact Us:</h1>
-
-  <div class="tab">Name:
-    <p><input placeholder="First name..."></p>
-    <p><input placeholder="Last name..."></p>
-  </div>
-
-  <div class="tab">Contact Info:
-    <p><input placeholder="E-mail..."></p>
-    <p><input placeholder="Phone..."></p>
-  </div>
-
-  <div class="tab">Birthday:
-    <p><input placeholder="dd"></p>
-    <p><input placeholder="mm"></p>
-    <p><input placeholder="yyyy"></p>
-  </div>
-
-  <div class="tab">Description:
-  <p><input placeholder="Description..." <textarea id="w3review" name="w3review" rows="4" cols="50"></p>
-  </div>
-
-  <div style="overflow:auto;">
-    <div style="float:right;">
-      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+    <div class="tab">Name:
+      <p><input name="first_name" placeholder="First name..." required></p>
+      <p><input name="last_name" placeholder="Last name..." required></p>
     </div>
-  </div>
 
-  <div style="text-align:center;margin-top:30px;">
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-  </div>
+    <div class="tab">Contact Info:
+      <p><input type="email" name="email" placeholder="E-mail..." required></p>
+      <p><input type="tel" name="phone" placeholder="Phone..." required></p>
+    </div>
 
-</form>
+    <div class="tab">Birthday:
+      <p><input name="day" placeholder="dd" required></p>
+      <p><input name="month" placeholder="mm" required></p>
+      <p><input name="year" placeholder="yyyy" required></p>
+    </div>
+
+    <div class="tab">Description:
+      <p><textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="Description..." required></textarea></p>
+    </div>
+
+    <div style="overflow:auto;">
+      <div style="float:right;">
+        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:30px;">
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+    </div>
+  </form>
 </section>
 
 <footer>
   <p>© 2025 SOFT — All Rights Reserved</p>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<a href="https://www.instagram.com/soft.strawberryy?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="fa fa-instagram"></a>
-<a href="#" class="fa fa-whatsapp"></a>
+  <a href="https://www.instagram.com/soft.strawberryy?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="fa fa-instagram"></a>
+  <a href="#" class="fa fa-whatsapp"></a>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
-
