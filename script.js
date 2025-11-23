@@ -5,64 +5,55 @@ document.getElementById("shopBtn").addEventListener("click", function() {
 
 var currentTab = 0; 
 showTab(currentTab); 
-
 function showTab(n) {
   var x = document.getElementsByClassName("tab");
   x[n].style.display = "block";
-
-  document.getElementById("prevBtn").style.display = n === 0 ? "none" : "inline";
-  document.getElementById("nextBtn").innerHTML = (n === x.length - 1) ? "Submit" : "Next";
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Submit";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Next";
+  }
+  fixStepIndicator(n)
 }
 
 function nextPrev(n) {
   var x = document.getElementsByClassName("tab");
-
-  if (n === 1 && !validateForm()) return false;
-
+  if (n == 1 && !validateForm()) return false;
   x[currentTab].style.display = "none";
-
-  currentTab += n;
-
+  currentTab = currentTab + n;
   if (currentTab >= x.length) {
     document.getElementById("regForm").submit();
     return false;
   }
-
   showTab(currentTab);
 }
 
 function validateForm() {
-  var x = document.getElementsByClassName("tab");
-  var y = x[currentTab].getElementsByTagName("input");
-  var valid = true;
-
-  for (let i = 0; i < y.length; i++) {
-    if (y[i].value.trim() === "") {
-      y[i].classList.add("invalid");
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  for (i = 0; i < y.length; i++) {
+    if (y[i].value == "") {
+      y[i].className += " invalid";
       valid = false;
-    } else {
-      y[i].classList.remove("invalid");
     }
   }
-
-  return valid;
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; 
 }
 
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  var slides = document.getElementsByClassName("mySlides");
-
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+function fixStepIndicator(n) {
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
   }
-
-  slideIndex++;
-  if (slideIndex > slides.length) slideIndex = 1;
-
-  slides[slideIndex - 1].style.display = "block";
-
-  setTimeout(showSlides, 2000);
+  x[n].className += " active";
 }
 
