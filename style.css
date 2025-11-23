@@ -5,11 +5,30 @@
   font-family: "Times New Roman", sans-serif;
 }
 
+.images img {
+  max-width: 100%;
+  height: auto;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 10px;
+}
+
+@media (min-width: 600px) {
+  .images { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 1024px) {
+  .images { grid-template-columns: 1fr 1fr 1fr; }
+}
+
 body {
   background: #FFF3EB;
   color: #333;
 }
-
 
 .text {
   position: absolute;
@@ -47,9 +66,9 @@ body {
   animation: fade 1.3s;
 }
 
-fade {
-  from {opacity: .4;}
-  to {opacity: 1;}
+@keyframes fade {
+  from { opacity: .4; }
+  to { opacity: 1; }
 }
 
 header {
@@ -86,14 +105,14 @@ nav a:hover {
 }
 
 .hero h2 {
-  font-size: 34px;
+  font-size: 38px;
   color: #B85454;
   margin-bottom: 8px;
 }
 
 .hero button {
-  margin-top: 18px;
-  padding: 12px 22px;
+  margin-top: 80px;
+  padding: 22px 50px;
   background: #CC9393;
   border-radius: 8px;
   color: #fff;
@@ -115,6 +134,7 @@ nav a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 15px;
+}
 
 .card {
   width: 220px;
@@ -196,6 +216,7 @@ footer {
   background: #fff;
   margin-top: 30px;
 }
+
 #logo {
   top: 10px;
   left: 30%;
@@ -204,16 +225,23 @@ footer {
 }
 
 .fa {
-  padding: 20px;
-  font-size: 30px;
+  display: inline-flex;
+  align-items:center;
+  justify-content:center;
   width: 50px;
-  text-align: center;
+  height:50px;
+  font-size: 28px;
+  color:white;
+  text-align:center;
   text-decoration: none;
+  border-radius: 50%;
+  margin: 0 5px;
 }
 
 .fa:hover {
   opacity: 0.7;
 }
+
 .fa-instagram {
   background: #594C85;
   color: white;
@@ -223,24 +251,10 @@ footer {
   background: #62CC65;
   color: white;
 }
-.fa {
-  display: inline-flex;
-  align-items:center;
-  justify-content:center;
-  width: 50px;
-  height:50px;
-  line-height:50px;
-  font-size: 28px;
-  color:white;
-  line-height:50px;
-  text-align:center;
-  text-decoration: none;
-  border-radius: 50%;
-}
 
 #banner {
-max-width: 100%;
-height: 50%;
-margin: 0px;
-padding: 0px; 
-  }
+ max-width: 100%;
+ height: 50%;
+ margin: 0px;
+ padding: 0px; 
+}
